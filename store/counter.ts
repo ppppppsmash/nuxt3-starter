@@ -1,8 +1,8 @@
-import { ref, computed } from "vue";
-import { defineStore } from "pinia";
+import { ref, computed } from 'vue';
+import { defineStore } from 'pinia';
 
 export const useCounterStore = defineStore(
-  "counter",
+  'counter',
   () => {
     const count = ref(0);
     function increment() {
@@ -10,4 +10,8 @@ export const useCounterStore = defineStore(
     }
     return { count, increment };
   },
+  {
+    persist: true,
+    // defaultでlocalStorageに保存してくれる
+  }
 );
