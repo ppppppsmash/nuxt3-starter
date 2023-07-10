@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { useCounterStore } from "@/store/counter";
 import { storeToRefs } from "pinia";
 const counterStore = useCounterStore();
@@ -10,7 +10,5 @@ const { count } = storeToRefs(counterStore);
   <div>
     <h1>Count: {{ count }}</h1>
     <button @click="increment">プラス</button>
-    <br />
-    <!-- <nuxt-link to="/">もどる</nuxt-link> -->
   </div>
 </template>

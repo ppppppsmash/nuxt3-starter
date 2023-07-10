@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
+  css: ['@/assets/scss/style.scss'],
   app: {
     head: {
       title: 'nuxt3 starter',
