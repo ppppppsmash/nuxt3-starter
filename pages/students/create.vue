@@ -1,9 +1,14 @@
 <script setup>
-  const student = {
+  const student = ref({
     name: "",
     course: "",
     email: "",
     phone: ""
+  })
+
+  // methods
+  const saveStudent = () => {
+    console.log("methods test")
   }
 </script>
 
@@ -22,9 +27,10 @@
       </div>
 
       <div>
-        <form @submit.prevent="">
+        <form @submit.prevent="saveStudent">
           <div>
             <label>Name</label>
+            {{ student.name }}
             <input type="text" v-model="student.name" />
           </div>
           <div>
