@@ -5,8 +5,7 @@ import NavBar from "@/components/NavBar"
 <template>
   <div>
     <NuxtLayout>
-      <!-- <TheHeader /> -->
-      <nav>nav</nav>
+      <NavBar />
         <NuxtPage />
       <TheFooter />
     </NuxtLayout>
