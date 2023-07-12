@@ -14,7 +14,7 @@
       />
       <div class="p-4 flex flex-col">
         <div>
-          <h1 class="text-2xl text-blue-700">コンボイ</h1>
+          <h1 class="text-2xl text-black">コンボイ</h1>
           <p class="text-gray-700">
             テキスト
           </p>
