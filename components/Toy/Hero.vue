@@ -8,7 +8,7 @@
     bg-[url('https://tf.takaratomy.co.jp/wordpress/wp-content/themes/tf/img/products/tf_mp/item_tf_mp-10_01.jpg')]"
   >
     <div
-      class="z-10 absolute w-full h-full flex justify-center items-center">
+      class="z-10 absolute w-full h-full flex justify-center items-center"
     >
       <div
         class="text-center w-1/2"

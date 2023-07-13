@@ -1,9 +1,13 @@
 <script setup>
 const brand = ref("")
-const router = useRouter()
+const brandError = ref(false)
 
+// https://nuxt.com/docs/api/utils/navigate-to
 const handleSearch = () => {
-  router.push(`/brand/${brand.value}/toy`)
+  if(!brand.value) {
+    return brandError.value = true
+  }
+  navigateTo(`/brand/${brand.value}/toy`, { replace: true })
 }
 </script>
 
@@ -14,8 +18,9 @@ const handleSearch = () => {
   >
     <input
       type="text"
-      class="py-3 px-5 w-10/12 text-2xl rounded-full focus:outline-none"
+      class="py-3 px-5 w-10/12 text-2xl rounded-sm focus:outline-none"
       placeholder="ロボットを探す"
+      :class="brandError ? 'border-red-500 border-4' : ''"
       v-model="brand"
     />
     <button
