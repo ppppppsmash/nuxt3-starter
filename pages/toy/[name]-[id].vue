@@ -15,8 +15,8 @@
     <ToyDetailDescrisption />
 
     <ToyDetailContact />
+
   </div>
-  <!-- TOY DETAIL PAGE   -->
 
 </template>
 
