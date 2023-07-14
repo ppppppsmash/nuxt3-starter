@@ -11,7 +11,7 @@
         class="w-full"
         alt=""
       />
-      <h1 class="mt-10 text-4xl">コンボイ</h1>
+      <h1 class="mt-10 text-4xl">コンボイ22</h1>
       <div
         class="text-slate-500 flex text-lg mt-3 border-b pb-5 justify-between"
       >
