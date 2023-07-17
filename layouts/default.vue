@@ -3,8 +3,15 @@
 </script>
 
 <template>
-  <div>
-    <NavBar />
+  <nav class="flex justify-center mt-10">
+    <NuxtLink
+      class="px-4 py-2 border rounded-lg"
+      to="/"
+    >
+    トップ
+    </NuxtLink>
+  </nav>
+  <main>
     <slot />
-  </div>
+  </main>
 </template>
