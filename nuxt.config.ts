@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     '@pinia-plugin-persistedstate/nuxt',
     'nuxt-windicss',
   ],
+  runtimeConfig: {
+    apiKey: '',
+    apiBaseUrl: ''
+  },
   css: ['@/assets/scss/style.scss'],
   app: {
     head: {
