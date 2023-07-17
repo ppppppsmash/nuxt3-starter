@@ -4,7 +4,11 @@ export default defineNuxtConfig({
   typescript: {
     strict: true
   },
-  modules: ['@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt'],
+  modules: [
+    '@pinia/nuxt', 
+    '@pinia-plugin-persistedstate/nuxt',
+    'nuxt-windicss',
+  ],
   css: ['@/assets/scss/style.scss'],
   app: {
     head: {
@@ -25,17 +29,7 @@ export default defineNuxtConfig({
           type: 'image/x-icon',
           href: '/favicon.ico'
         },
-        // {
-        //   rel: 'stylesheet',
-        //   href: ''
-        // }
       ],
-      // script: [
-      //   {
-      //     src: '',
-      //     type: 'text/javascript'
-      //   }
-      // ]
     }
   },
   postcss: {
