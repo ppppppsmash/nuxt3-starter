@@ -16,6 +16,5 @@
 </style>
 
 <template>
-  <!-- components/Toy/Hero.vue -->
-  <ToyHero />
+  <div>Hello world</div>
 </template>

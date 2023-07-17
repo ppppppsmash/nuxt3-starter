@@ -4,8 +4,7 @@
 <template>
   <div>
     <NuxtLayout>
-        <NuxtPage />
-      <TheFooter />
+      <NuxtPage />
     </NuxtLayout>
   </div>
 </template>
