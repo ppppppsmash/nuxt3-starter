@@ -17,20 +17,23 @@ const imgURL = computed(() => props.movie?.poster_path != null ?
 
 <template>
   <div class="h-128 w-64 border flex flex-col text-center">
-    <div class="mb-5 bg-green-600 inline-block">
+    <NuxtLink 
+      class="mb-5 bg-green-600 inline-block"
+      :to="`/movies/${movie?.id}`"
+    >
       <img
         class="transform hover:translate-x-6 hover:-translate-y-6
           delay-50 duration-100 inline-block"
         :src="imgURL"
         alt="映画ポスター"
       />
-    </div>
+    </NuxtLink>
     <div class="text-lg">
       {{ movie?.title }}
     </div>
 
     <p class="text-m text-gray-500 break-words text-wrap truncate
-    overflow-hidden px-2">
+      overflow-hidden px-2">
       {{ movie?.overview }}
     </p>
   </div>
