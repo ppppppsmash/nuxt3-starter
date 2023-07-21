@@ -8,10 +8,14 @@ export default defineNuxtConfig({
     '@pinia/nuxt', 
     '@pinia-plugin-persistedstate/nuxt',
     'nuxt-windicss',
+    '@vueuse/nuxt'
   ],
   runtimeConfig: {
     apiKey: '',
-    apiBaseUrl: ''
+    apiBaseUrl: '',
+    public: {
+      imgBaseUrl: ''
+    }
   },
   css: ['@/assets/scss/style.scss'],
   app: {

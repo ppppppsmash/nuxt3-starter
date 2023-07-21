@@ -3,8 +3,10 @@
 
   const searchTerm = ref("")
 
+  const debouncedSearchTerm = refDebounced(searchTerm, 700)
+
   const url = computed(() => {
-    return `api/movies/search?query=${searchTerm.value}`
+    return `api/movies/search?query=${debouncedSearchTerm.value}`
   })
 
   const { data } = await useFetch<APIResponse>(url)
