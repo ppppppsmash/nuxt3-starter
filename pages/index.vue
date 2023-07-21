@@ -28,7 +28,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4
       xl:grid-cols-5 self-center gap-x-10 gap-y-10 mb-10">
         <div v-for="movie in data?.results">
-          {{ movie.title }}
+          <MovieCard :movie="movie"></MovieCard>
         </div>
       </div>
     </div>
