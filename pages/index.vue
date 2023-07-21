@@ -2,11 +2,21 @@
   import { APIResponse } from "@/types/APIResponse"
 
   const searchTerm = ref("")
+  const page = ref(1)
 
+  const disabledPrevious = computed(() => {
+    return page.value === 1
+  })
+
+  const disabledNext = computed(() => {
+    return page.value + 1 === data.value?.total_pages
+  })
+
+  // 検索後0.7秒遅延で結果が出てくる
   const debouncedSearchTerm = refDebounced(searchTerm, 700)
 
   const url = computed(() => {
-    return `api/movies/search?query=${debouncedSearchTerm.value}`
+    return `api/movies/search?query=${debouncedSearchTerm.value}&page=${page.value}`
   })
 
   const { data } = await useFetch<APIResponse>(url)
@@ -32,6 +42,30 @@
         <div v-for="movie in data?.results">
           <MovieCard :movie="movie"></MovieCard>
         </div>
+      </div>
+      <div
+        class="flex justify-center"
+        v-if="data?.results.length"
+      >
+        <button
+          class="px-4 py-2 text-m border rounded-lg"
+          v-if="!disabledPrevious"
+          @click="page--"
+        >
+          前へ
+        </button>
+        <div
+          class="px-4 py-2 text-m border rounded-lg"
+        >
+          {{ page }}
+        </div>
+        <button
+          class="px-4 py-2 text-m border rounded-lg"
+          v-if="!disabledNext"
+          @click="page++"
+        >
+          次へ
+        </button>
       </div>
     </div>
   </div>
