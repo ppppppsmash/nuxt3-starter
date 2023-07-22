@@ -1,12 +1,15 @@
-export default defineEventHandler((event: any) => {
+export default async (event: any) => {
   const id = [...event.node.req.url.split("/")].pop()
   const config = useRuntimeConfig()
-  return $fetch(
-    `${config.apiBaseUrl}/movie/${id}`,
+
+  const result = await $fetch(
+    `${config.apiBaseUrl}/movie/${id}?api_key=${config.apiKey}`,
     {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${config.apiKey}`
       }
     })
-})
+
+    return result
+}

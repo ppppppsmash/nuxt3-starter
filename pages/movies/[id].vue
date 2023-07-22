@@ -4,13 +4,16 @@ import { Movie } from "@/types/Movie"
 const route = useRoute()
 const config = useRuntimeConfig()
 const movieId = computed(() => route.params.id)
+console.log(route)
 
 const url = computed(() => {
-    return `api/movies/${movieId.value}`
+    return `/api/movies/${movieId.value}`
   })
 
 const { data } = await useFetch<Movie>(url)
-const imgUrl = computed(() => data.value?.poster_path ?
+
+console.log(data)
+const imgURL = computed(() => data.value?.poster_path ?
   `${config.public.imgBaseUrl}/${data.value.poster_path}` : 
   'https://via.placeholder.com/300x500')
 </script>
@@ -20,7 +23,7 @@ const imgUrl = computed(() => data.value?.poster_path ?
     <div class="grid grid-cols-7 gap-1">
       <img
         class="col-span-2"
-        :src="imgUrl"
+        :src="imgURL"
         alt=""
       />
       <div
