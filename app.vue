@@ -4,7 +4,10 @@
 <template>
   <div>
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage
+        keepalive
+        include="index"
+      />
     </NuxtLayout>
   </div>
 </template>
