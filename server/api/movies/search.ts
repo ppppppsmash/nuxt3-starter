@@ -3,7 +3,7 @@ export default async (event: any) => {
   const config = useRuntimeConfig()
 
   const result = await $fetch(
-    `${config.apiBaseUrl}/search/movie?query=${query}&api_key=${config.apiKey}&page=${page}`,
+    `${config.apiBaseUrl}/search/movie?query=${query}&api_key=${config.apiKey}&page=${page}&language=ja-JA`,
     {
       method: "GET",
       headers: {

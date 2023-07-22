@@ -46,7 +46,7 @@ const imgURL = computed(() => data.value?.poster_path ?
         </div>
 
         <div class="text-lg mb-2">
-          鑑賞時間の長さ: {{ data?.runtime }} mins
+          鑑賞時間の長さ: {{ data?.runtime }}分
         </div>
         <p class="text-gray-600 text-m">
           概要: {{ data?.overview }}
