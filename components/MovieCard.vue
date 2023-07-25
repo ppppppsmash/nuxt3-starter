@@ -18,7 +18,7 @@ const imgURL = computed(() => props.movie?.poster_path != null ?
 <template>
   <div class="h-128 w-64 border flex flex-col text-center">
     <NuxtLink 
-      class="mb-5 bg-green-600 inline-block"
+      class="mb-5 bg-gray-900 inline-block"
       :to="`/movies/${movie?.id}`"
     >
       <img
